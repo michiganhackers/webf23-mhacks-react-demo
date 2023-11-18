@@ -1,5 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.svg'
+import './App.css'
+
+const defaultTasks = [
+  {
+    id: crypto.randomUUID(),
+    title: 'Take out the trash',
+    completed: false,
+  },
+  {
+    id: crypto.randomUUID(),
+    title: 'Do laundry',
+    completed: false,
+  },
+  {
+    id: crypto.randomUUID(),
+    title: 'Go to MHacks',
+    completed: true,
+  },
+]
 
 function App() {
   return (
@@ -19,7 +37,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
