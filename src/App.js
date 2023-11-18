@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Task from './Task'
 import './App.css'
 
 const defaultTasks = [
@@ -65,20 +66,9 @@ function App() {
       <button className="addButton" onClick={() => handleAddTask()}>
         +
       </button>
-      {tasks.map((task) => {
-        return (
-          <div className="todo">
-            <input
-              type="checkbox"
-              checked={task.completed}
-              onClick={() => {
-                toggleCompleted(task.id, !task.completed)
-              }}
-            />
-            <p>{task.title}</p>
-          </div>
-        )
-      })}
+      {tasks.map((task) => (
+        <Task task={task} toggleCompleted={toggleCompleted} />
+      ))}
     </div>
   )
 }
